@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>DYNAMIC RESUME BUILDER</h1>
+        <form id ="resumeForm">
+            <fieldset>
+                <legend>Username</legend>
+                <input type="text" id="Username" placeholder="Username" required><br><br>
+
+                <legend>Personal Information</legend><br>
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" name="photo" required> <br><br>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </fieldset>
+            <fieldset>
+                <legend>Education</legend>
+                <label for="education">School Name</label>
+                <input type="text" id="education" name="education" required>
+
+                <label for="degree">Your Degree:</label>
+                <input type="text" id="degree" name="degree" required>
+            </fieldset>
+            <fieldset>
+                <legend>Work Experience</legend>
+                <label for="workexperience">Details:</label>
+                <textarea id="workexperience" name="workexperience" required></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Skills</legend>
+                <label for="Skills">Highlight Your Skills:</label>
+                <textarea id="skills" name="skills" required></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Activities</legend>
+                <label for="activities">List Pursuits:</label>
+                <textarea id="activities" name="activities" required></textarea>
+            </fieldset>
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+    <div id="resumePage" class="hidden">
+        <div id="resumeContent">
+            <div id="resumePhotoContainer">
+                <img id="resumePhoto" src="" alt="Uploaded Photo" class="resume-photo">
+            </div>
+            <h1 id="resumename"></h1>
+            <p id="resumeEmail"></p>
+            <p id="resumePhone"></p>
+
+            <h2>Education</h2>
+            <p id="resumeEducation"></p>
+
+            <h2>Work Experience</h2>
+            <p id="resumeExperience"></p>
+
+            <h2>Skills</hr2>
+            <p id="resumeSkills"></p>
+
+            <h2>Activities</h2>
+            <p id="resumeActivities"></p>
+        </div>
+        <button id="editButton">EDIT RESUME</button>
+        <button id="sharelinkButton">SHARE YOUR RESUME</button>
+        <button id="backToForm">BACK TO FORM</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
